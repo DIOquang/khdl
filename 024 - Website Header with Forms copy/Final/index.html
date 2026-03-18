@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Cluster Summarizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="landing">
+        <nav class="navbar">
+          <div class="navigation">
+            <a href="#" class="logo">
+              <span class="circle"></span>
+              <span class="logo-text">Cluster AI</span>
+            </a>
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Demo</a>
+          </div>
+        </nav>
+        <div class="banner">
+          <h1>Tom tat y nghia theo cluster<span>Survey AI Tool</span></h1>
+        </div>
+        <div class="contact app-panel">
+          <h3>Upload va phan tich</h3>
+          <h1>Cluster Summary</h1>
+          <p>Ket qua hien thi 2 cot: <span>cluster</span> va <span>tom_tat</span></p>
+          <div class="app-content">
+            <div class="app-left">
+              <form class="contact-form" id="summary-form">
+                <div class="input-group">
+                  <input id="file-input" type="file" accept=".xlsx" />
+                  <i class="fa-solid fa-file-excel"></i>
+                </div>
+                <div class="input-group">
+                  <input id="model-input" type="text" value="llama-3.1-8b-instant" placeholder="Groq Model" />
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="btn-group">
+                  <button class="contact-btn" id="reset-btn" type="button">Reset</button>
+                  <button class="contact-btn" id="run-btn" type="submit">Tom tat ngay</button>
+                </div>
+              </form>
+
+              <div class="status-wrap">
+                <p id="status-text" class="status-text">San sang.</p>
+              </div>
+            </div>
+
+            <div class="app-right">
+              <div class="table-wrap">
+                <table id="result-table">
+                  <thead>
+                    <tr>
+                      <th>cluster</th>
+                      <th>tom_tat</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-bottom"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
